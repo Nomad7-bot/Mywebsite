@@ -9,35 +9,38 @@ export default function Carousel() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollRef.current) return;
-    const cardWidth = scrollRef.current.querySelector('div')?.offsetWidth ?? 400;
-    scrollRef.current.scrollBy({ left: direction === 'left' ? -(cardWidth + 32) : cardWidth + 32, behavior: 'smooth' });
+    // desktop: card 400px + gap-8 (32px)
+    const step = 432;
+    scrollRef.current.scrollBy({ left: direction === 'left' ? -step : step, behavior: 'smooth' });
   };
 
   return (
-    <section className="mt-32">
-      <div className="flex items-center justify-between mb-12">
-        <h2 className="font-headline text-3xl font-bold tracking-tight">Selected Archives</h2>
-        <div className="flex gap-4">
-          <button
-            aria-label="Previous"
-            onClick={() => scroll('left')}
-            className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-          >
-            <span className="material-symbols-outlined text-xl">chevron_left</span>
-          </button>
-          <button
-            aria-label="Next"
-            onClick={() => scroll('right')}
-            className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
-          >
-            <span className="material-symbols-outlined text-xl">chevron_right</span>
-          </button>
+    <section className="pt-10 md:pt-16 pb-24">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="font-headline text-[1.7rem] md:text-3xl font-bold tracking-tight">Selected{' '}<br className="md:hidden" />Archives</h2>
+          <div className="hidden md:flex gap-4">
+            <button
+              aria-label="Previous"
+              onClick={() => scroll('left')}
+              className="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              <span className="material-symbols-outlined text-base">chevron_left</span>
+            </button>
+            <button
+              aria-label="Next"
+              onClick={() => scroll('right')}
+              className="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              <span className="material-symbols-outlined text-base">chevron_right</span>
+            </button>
+          </div>
         </div>
       </div>
       <div className="relative group">
-        <div ref={scrollRef} className="flex gap-8 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8 -mx-4 px-4">
+        <div ref={scrollRef} className="flex gap-3 md:gap-8 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8 px-5 md:px-8">
           {portfolioItems.map((item) => (
-            <div key={item.id} className="flex-none w-[320px] md:w-[400px] snap-start group/card">
+            <div key={item.id} className="flex-none w-[calc(100vw-40px)] md:w-[400px] snap-center md:snap-start group/card md:first:ml-3">
               <div className="mb-6 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4] relative">
                 <Image
                   src={item.imageUrl}

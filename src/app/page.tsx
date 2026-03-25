@@ -67,9 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-8 pt-10 md:pt-24 pb-24">
-        <Carousel />
-      </div>
+      <Carousel />
     </>
   );
 }
