@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#ffffff",
+              "surface": "#faf9f6",
+              "surface-bright": "#faf9f6",
+              "surface-dim": "#dbdad7",
+              "inverse-primary": "#d7c3b2",
+              "inverse-on-surface": "#f2f1ee",
+              "on-surface": "#1a1c1a",
+              "surface-container-low": "#f4f3f1",
+              "surface-container-highest": "#e3e2e0",
+              "secondary-fixed": "#f4dfcb",
+              "on-error": "#ffffff",
+              "tertiary-container": "#c3c8d4",
+              "on-surface-variant": "#4d453e",
+              "surface-variant": "#e3e2e0",
+              "on-background": "#1a1c1a",
+              "outline": "#7f756d",
+              "on-tertiary-fixed-variant": "#414751",
+              "error-container": "#ffdad6",
+              "primary-container": "#d9c5b4",
+              "inverse-surface": "#2f312f",
+              "on-secondary-fixed-variant": "#524436",
+              "outline-variant": "#d0c4bb",
+              "on-tertiary-fixed": "#161c24",
+              "on-error-container": "#93000a",
+              "tertiary": "#595f69",
+              "on-primary-fixed-variant": "#524437",
+              "primary-fixed": "#f4dfcd",
+              "secondary-container": "#f4dfcb",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#d7c3b0",
+              "on-primary-container": "#605144",
+              "tertiary-fixed": "#dee2ef",
+              "primary-fixed-dim": "#d7c3b2",
+              "surface-container-high": "#e9e8e5",
+              "background": "#faf9f6",
+              "surface-tint": "#6b5c4e",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#c1c6d2",
+              "on-secondary-container": "#716252",
+              "primary": "#6b5c4e",
+              "surface-container": "#efeeeb",
+              "on-secondary-fixed": "#241a0e",
+              "on-primary-fixed": "#24190f",
+              "secondary": "#6b5c4c",
+              "on-tertiary-container": "#4e545e"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-bleed {
+        background: linear-gradient(to bottom, rgba(250, 249, 246, 0.8), rgba(250, 249, 246, 0));
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Implementation -->
+<nav class="fixed top-0 w-full z-50 bg-[#FAF9F6]/80 dark:bg-[#1A1C1A]/80 backdrop-blur-xl transition-opacity duration-300">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#1A1C1A] dark:text-[#FAF9F6] font-headline">
+                Digital Curator
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-manrope text-sm tracking-tight font-medium">
+<a class="text-[#1A1C1A]/60 dark:text-[#FAF9F6]/60 hover:text-[#6B5C4E] hover:opacity-70 transition-opacity duration-300" href="#">Tech</a>
+<a class="text-[#1A1C1A]/60 dark:text-[#FAF9F6]/60 hover:text-[#6B5C4E] hover:opacity-70 transition-opacity duration-300" href="#">Eat</a>
+<a class="text-[#1A1C1A]/60 dark:text-[#FAF9F6]/60 hover:text-[#6B5C4E] hover:opacity-70 transition-opacity duration-300" href="#">Lifestyle</a>
+<a class="text-[#1A1C1A]/60 dark:text-[#FAF9F6]/60 hover:text-[#6B5C4E] hover:opacity-70 transition-opacity duration-300" href="#">Etc</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#6B5C4E] dark:text-[#D9C5B4] scale-95 active:duration-100" data-icon="menu">menu</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Featured Post Section - Updated to Full Screen (100vh) -->
+<section class="h-screen w-full flex items-center relative overflow-hidden bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 overflow-hidden rounded-xl shadow-2xl">
+<img class="w-full aspect-[16/10] object-cover hover:scale-[1.02] transition-transform duration-1000" data-alt="minimalist modern workspace with light oak desk, designer chair, and soft afternoon sunlight casting long shadows on cream walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5n_APKfHXrnUgQf3TSPolEf8wrMei9uwABPEe1uYchmbDhxpkQLzNTETTyzRUNozLgQ_yMA2aLgoo4eeGFBsA1whu8gE48h33FX8rD1x4TOo0dmLcGlTXrTdAytslNABuDLo-ZQIyHHp0zDlOxj35LWm8xrjI1596RQgN6UtHUXTGjKPtBWvlPCmmJsIqQ2l3xQxsUjvBP-piVjaiCdlvvEKBQ4C3k-d0bctXmK-eCO78noFsdhMJoDpABbuApf9SXDbxNullA"/>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center py-12">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-6 font-bold">Featured Story</span>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] mb-8 text-on-surface">
+                            The Soul of Minimalist Architecture.
+                        </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-md">
+                            Exploring how natural materials and intentional negative space redefine the concept of a modern sanctuary in 2024.
+                        </p>
+<a class="inline-flex items-center gap-3 font-label text-sm font-bold text-primary group" href="#">
+                            Read the essay
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-bounce">
+<span class="font-label text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</section>
+<!-- Container for subsequent sections to maintain original padding/layout -->
+<div class="max-w-7xl mx-auto px-8 pt-24 pb-24">
+<!-- Feed Area: Asymmetrical Layout -->
+<section>
+<div class="flex items-center justify-between mb-16">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Latest Curations</h2>
+<div class="h-px flex-1 bg-outline-variant/30 mx-8"></div>
+<button class="font-label text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">View Archive</button>
+</div>
+<!-- Asymmetrical Grid Container: Row 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+<!-- Left: Large Feature Card -->
+<div class="lg:col-span-7">
+<article class="group">
+<div class="mb-8 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700 aspect-[4/5]" data-alt="close-up of ceramic coffee dripper with steaming coffee in a warm sunlit kitchen with wood textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFTbrD1sAUjNB8DRy-DpGEo9g_kEb7MQKTnCIA-WoyxACAJm9mYONZ-7JGZKXFrviZ6qCuVNoNKZ_iS8WxyKC81Qqh-PBTNnHgAp33UkLT7BcF2O6H7b7gLGEKPn5SPbZsXFNUFK6YH8TU-7JX4kMefO0wxEKQAY6QsWjYcTjluP2gOzRAB6n3srKxqAvTZHzg6pxSe4R0n0gLXKxJRI76uepmDrSawP0i_WRkIcUKKCwTgzNgZ3t3vww4gOtGHKz_2BlJzkYgxQ"/>
+</div>
+<div class="space-y-4 max-w-xl">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Eat</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 24, 2024</span>
+</div>
+<h3 class="font-headline text-3xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                    The Ritual of Morning Pour-Over.
+                                </h3>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                                    Finding clarity in the slow process of artisanal coffee brewing. A meditation on heat, timing, and sensory focus that transforms a morning routine into a sacred daily ritual.
+                                </p>
+</div>
+</article>
+</div>
+<!-- Right: Staggered Smaller Cards -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-x-8 gap-y-16">
+<article class="group">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-square" data-alt="ultra-thin modern laptop on a light oak table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Jhq3Dh1yqGJ7Ryl-1yS6hktsHA8SZztanp-cjhlse-gDoMkHzBdotpfIqUf9W5z_lvOkuA1gD2RMV_-SK_p0ZtAdWWfur3JiqDvh07b4sOdQ-jthP-57Hjl3DUKPPtVDst1SfeBUtVFgm7ryv0oUXIPwruiduq_f42IVIzjy4PCNc7iRYq7wu-TMUt7k9g4SwuGc2qwHAcKYBUI6r8KUV_y_NdGcZQVQgjXM6qtKzgiClhUp_Bg-lRR1w-3ejXgZh05CBlZrcw"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Tech</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 20, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Design Tools for the Next Decade.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Why the future of software feels more tactile and organic than ever before.
+                                </p>
+</div>
+</article>
+<article class="group mt-12">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]" data-alt="elegant linen sofa with neutral toned pillows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXRJHOcT7VloN_JpzXDrhVMRaq89s4AB18F1mVpjnPPl08k6eiSUwp-OtOiFCbJeDHIoTEbNufNxJcpQ9qWdiWkNnpOXVoIaC0SJhiIUZU43xGdco_XLzfdCkoBnyufOSSBgT1xDMa7YOXpSL-JpeiepWzaVpqvM7O5YHqd10G_Ge2hicFrp7_qSSxjGXreWatYCRhmD-NmEcYHnOTumJXOlJVLeamcMfE3yCpYzJfQPtEfp5d28zCxDsbY_NXwPrAddjbln-4AQ"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Lifestyle</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 15, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    The Warmth of Linen and Oak.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    A guide to selecting home materials that age with grace and character.
+                                </p>
+</div>
+</article>
+<article class="group -mt-8">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[2/3]" data-alt="dark code editor screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHBvewCjdv3S-PwkMohI5dy-Srwv1LliS9tCH1CY0eodM_YpEytyFPHEtAK9INQkk0m0hrC3-DqBOPlva6_uhIJ1EaVDh6CN-7juVH5Q7GPHXRztDbl7AOEQBfym2SxwEf-oRa6kjJKEL7NSYuUaSCvNVBmYRe4cItwk_E967oJ-HJVmUwhimFsCsseihcn_QTdluFQGP2bCP8GYCBR8nMIKgMcGHNfb59dI9H9Qs7BykKf6PUayeGAJFjLO1GqWR7cDa3fwWGw"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Etc</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 12, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    The Philosophy of Clean Code.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    How writing code is remarkably similar to editing a literary essay.
+                                </p>
+</div>
+</article>
+<article class="group mt-4">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-square" data-alt="scenic view of a small coastal village in Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb28iFbdX7mnCT0cY1ZvRkt92yY1JJaxQRf2HVWWyXxEBuoP8GJvaXVF6d12gH1ZM9vBTWqZM_cqw545Ry1TX0-YChWyA3_rBRPR7XWX98vQwFDqa6SAiEhrQG2xcsKu5wGt1MI1sbFb2EBMB2viqkgFGervKA1Td1DmurJYBdYa_K_PcMyoKc4MiQkSr0eu-vvTjFGbxuDO1hvdElWRaqnBRjPH94Ib4GC-z4yjZ9tpZellGRxpgZwlVrSIHhjqqrYpNaGexzoQ"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Lifestyle</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 08, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Traveling with Intent.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Why the best destinations are the ones where we learn to do nothing.
+                                </p>
+</div>
+</article>
+</div>
+</div>
+<!-- Asymmetrical Grid Container: Row 2 (Repeated Pattern) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12">
+<!-- Left: Large Feature Card -->
+<div class="lg:col-span-7">
+<article class="group">
+<div class="mb-8 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700 aspect-[4/5]" data-alt="brutalist architecture building with raw concrete textures and sharp angles against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALtHKmyDYnBntY7epoNuWmJD08T0oGkFOq1avlOgXR7fRXdh2DguyjcURq0FPsGJdDFz4HT-YVHdodJZ8gcz43cukfD_MNQCcMkMf_ORzHnF2JSxqPgmLdu3ji_d54xd92PcRKmEcpGldMvHfJ2TcYJpTYnquoiAh82mYaaFHqHiiVvq-GwumZFA5GFYN41DeznF_KWMCRTbCGYKUbKkKMLmUjbFkxjwY0fpgsd0aM2RlI07hHD9cwicpufWtOFwxpb1YsXdMljA"/>
+</div>
+<div class="space-y-4 max-w-xl">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">ARCHITECTURE</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Nov 02, 2024</span>
+</div>
+<h3 class="font-headline text-3xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                    The Geometry of Silence.
+                                </h3>
+<p class="text-on-surface-variant text-base leading-relaxed">
+                                    A study of how Brutalist structures use raw materiality to create spaces of profound quietude and reflection in dense urban environments.
+                                </p>
+</div>
+</article>
+</div>
+<!-- Right: Staggered Smaller Cards -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-x-8 gap-y-16">
+<article class="group">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-square" data-alt="handcrafted wooden chair with elegant curves and fine joinery details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEvLzqEW8_wuwO2MlBX4CKnIGY6Uu_E8Ztzxk3I1j5efd1qjELkIS02nKUCmuWrc3kVnWZDPPR_S35SwEuoUvKVPzsMuG_HtMKyKsXcbojZGT34go-aM4htNIVgu6RoDKmy4KF22NylY1UWYIy-Giznne0Dc8fWJ7WTZMd1rIPCrqm13RUAVjdY2uo_uVW-CqAAg5j-YaL1BBdL0NPcsMYsRRN65HkA0y_E11ZhpWMw99KrGzdOUHDys_qDl65U1x1JvrtEINj5w"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">DESIGN</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 30, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Master of the Joint.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Reclaiming the art of Japanese joinery in contemporary furniture design.
+                                </p>
+</div>
+</article>
+<article class="group mt-12">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]" data-alt="minimalist ceramic vase with a single dried branch on a stone plinth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTSUl1Z2_xMJlBxRmflVhrpOk1vX0js2f3HMea9ngpziYR0_zXXGii_MYPlL7blzg8G58kgjF3VUFUibxY9dV-dYEDHDZYZTuZtjCtKLeVl2i-jcRmkZbjPZuBdpQ2TxP07yLK9k-rwfGSGOymYltCd-y25aegq0SdmWq0bglVjppPkSUI0Iy30VGQLoH6JYhAU-8P7ARDcDfVsEw48CUGNKf3XBYM9WGhHr17lsxKdf-2cCS9agjQ9zVjkjy7LbkPcDJR0M4Tsg"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">LIFESTYLE</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 28, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Objects that Breathe.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Choosing decor that invites presence and intentionality into your home.
+                                </p>
+</div>
+</article>
+<article class="group -mt-8">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[2/3]" data-alt="winding road through a misty forest with tall pine trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0wg5GsuD8OZT_GH3oX_ernWXmr-7sT0VPQevUA6yM6b0FFrb6G0rWr-kBWPYeHvJ18_2LhUzzD246HwMJ2yUgNgXUUxl6JjmqbV-G7noHAxuwVCoJInryhl6MbMHUjqUFI0fyzROlvBHDPG7HKcwoysVme8J2fU9lmJvf_YyfOY9Ki5Yvs0IhR-sER9eKCL_YGV71V-BfXdbOc1IkC_8xOMB1oaHAbUI01R0yCtsj0y49L0p8Pwyb5VWK3HNnBUeMc5DoNYyWRg"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">LIFESTYLE</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 25, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    The Call of the North.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Why Scandinavia continues to lead the global conversation on quality of life.
+                                </p>
+</div>
+</article>
+<article class="group mt-4">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-square" data-alt="soft natural light hitting a textured beige wall with a simple clock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMjaxiElF6sZ5Tn-xO35yUUbTHkc9G_PogR7N3iy6TgC4-w17F5PQHUtWQIYhVAXJJ1AkbjOvwyyJ6tInkAja385NtZ2seyOKG0k6dIVup_K6OyTVpCS_CeVkaTxEim2uOviT2TRJz7xsF1SVZFu3fdU20pdkF-4oqFVCFBJagBT0ro8WD9mfPiqM-_mK1D-PmCNNwx7NPKCExmnIEGcVpQlls0wCAfKTeZL-jwWizr1DxTLaFSLkV8AI-cAK2N9Ul2evFhyZUA"/>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">DESIGN</span>
+<span class="text-[10px] text-on-surface/40 uppercase tracking-widest">Oct 22, 2024</span>
+</div>
+<h3 class="font-headline text-lg font-bold leading-snug group-hover:text-primary transition-colors">
+                                    Time as a Material.
+                                </h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">
+                                    Designing products that aren't just durable, but become more beautiful with age.
+                                </p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Second Featured Section (New) -->
+<section class="mt-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-4 flex flex-col justify-center order-2 lg:order-1">
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-4 font-semibold">Special Edition</span>
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-on-surface">
+                            Curating the Tactile Interface.
+                        </h2>
+<p class="text-on-surface-variant leading-relaxed mb-8 max-w-sm">
+                            An investigation into why the most innovative hardware designers are returning to knobs, sliders, and textured surfaces to ground our digital experiences.
+                        </p>
+<a class="inline-flex items-center gap-2 font-label text-sm font-bold text-primary group" href="#">
+                            Read the story
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="lg:col-span-8 overflow-hidden rounded-xl order-1 lg:order-2">
+<img class="w-full aspect-[16/9] object-cover hover:scale-[1.02] transition-transform duration-700" data-alt="close up of high-end audio equipment with brushed aluminum knobs and a warm wooden casing, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUlAsS-r1D2WOphs52uk25WU2V30BHzmttUeZMOjw7VSMWVf5XIPoW1xFiR48dplniGFp6NZa4TfTQmNsEuc1dzrWLGhlKx3sTj-JCsRROwPArYFE-4dmpRC3FOjA-cPMP1QtNaNlBs2L1vP-2wyEU1LearRRBFGEsn5pomh38v04x79B1Q49xXqx-JSHw6Q8Up6PvenHeNt4n8VVMf7d2jrpRo4szksbFLAUwPqcoHgorufQh4qtFCpLJUkvB2kCe-HKcHkbsbg"/>
+</div>
+</div>
+</section>
+<!-- Deep Dives / Selected Archives Carousel -->
+<section class="mt-32">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl font-bold tracking-tight">Selected Archives</h2>
+<div class="flex gap-4">
+<button aria-label="Previous" class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button aria-label="Next" class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="relative group">
+<div class="flex gap-8 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-8 -mx-4 px-4">
+<!-- Carousel Item 1 -->
+<div class="flex-none w-[320px] md:w-[400px] snap-start group/card">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="archival photo of mid-century modern furniture" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hP9Zg_Rj5LInXf-eO7Yv_rP9z-hW6e8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-[#6B5C4E] font-bold">Volume 01</span>
+<h3 class="font-headline text-xl font-bold leading-tight group-hover/card:text-primary transition-colors">The Mid-Century Modernism Resurgence.</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">An in-depth look at the enduring legacy of the Eames and Miller era in today's digital homes.</p>
+</div>
+</div>
+<!-- Carousel Item 2 -->
+<div class="flex-none w-[320px] md:w-[400px] snap-start group/card">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="black and white architecture photo" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kQ0vR_V9lP6m_v8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-[#6B5C4E] font-bold">Volume 02</span>
+<h3 class="font-headline text-xl font-bold leading-tight group-hover/card:text-primary transition-colors">Monochrome as a Mindset.</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Why limiting your palette can actually expand your creative horizons and mental clarity.</p>
+</div>
+</div>
+<!-- Carousel Item 3 -->
+<div class="flex-none w-[320px] md:w-[400px] snap-start group/card">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="top view of a well-organized creative workspace" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuF2nL9pE_Z1mO8v_v8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-[#6B5C4E] font-bold">Volume 03</span>
+<h3 class="font-headline text-xl font-bold leading-tight group-hover/card:text-primary transition-colors">The Craft of Analog Productivity.</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Exploring the tactile joy of paper planners, fountain pens, and offline thinking.</p>
+</div>
+</div>
+<!-- Carousel Item 4 -->
+<div class="flex-none w-[320px] md:w-[400px] snap-start group/card">
+<div class="mb-6 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="minimalist kitchen garden" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9kL0mB_Y3mP4v_v8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-[#6B5C4E] font-bold">Volume 04</span>
+<h3 class="font-headline text-xl font-bold leading-tight group-hover/card:text-primary transition-colors">Sustenance in the City.</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">How urban dwellers are reclaiming their relationship with food through indoor cultivation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="mt-32">
+<div class="bg-primary-container rounded-xl p-12 lg:p-20 relative overflow-hidden">
+<div class="relative z-10 max-w-2xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-primary-container mb-6 block font-bold">The Weekly Dispatch</span>
+<h2 class="font-headline text-4xl font-bold text-on-primary-container mb-8 tracking-tighter">
+                            Curated thoughts on design, tech, and slow living. Delivered to your inbox.
+                        </h2>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md">
+<input class="bg-surface/50 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary text-sm font-body" placeholder="email address" type="email"/>
+<button class="bg-primary text-on-primary rounded-lg px-8 py-4 font-label text-sm font-bold hover:opacity-90 transition-opacity">Subscribe</button>
+</form>
+</div>
+<!-- Abstract Design Element -->
+<div class="absolute right-[-10%] top-[-20%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Implementation -->
+<footer class="w-full border-t border-[#6B5C4E]/10 dark:border-[#D9C5B4]/10 bg-[#FDF5E6] dark:bg-[#1A1C1A]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-20 gap-8 max-w-7xl mx-auto">
+<div class="font-inter text-xs uppercase tracking-widest opacity-80 text-[#6B5C4E] dark:text-[#D9C5B4]">
+                © 2024 Digital Curator. Designed for the Organic Minimalist.
+            </div>
+<div class="flex gap-10">
+<a class="font-inter text-xs uppercase tracking-widest text-[#1A1C1A]/40 dark:text-[#FAF9F6]/40 hover:text-[#6B5C4E] dark:hover:text-[#D9C5B4] transition-colors" href="#">Twitter</a>
+<a class="font-inter text-xs uppercase tracking-widest text-[#1A1C1A]/40 dark:text-[#FAF9F6]/40 hover:text-[#6B5C4E] dark:hover:text-[#D9C5B4] transition-colors" href="#">Instagram</a>
+<a class="font-inter text-xs uppercase tracking-widest text-[#1A1C1A]/40 dark:text-[#FAF9F6]/40 hover:text-[#6B5C4E] dark:hover:text-[#D9C5B4] transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

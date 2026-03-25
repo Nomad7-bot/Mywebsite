@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Curator | Editorial Organicism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2f312f",
+              "on-primary-container": "#605144",
+              "tertiary-fixed-dim": "#c1c6d2",
+              "secondary-container": "#f4dfcb",
+              "on-tertiary-fixed": "#161c24",
+              "tertiary": "#595f69",
+              "on-primary-fixed-variant": "#524437",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container": "#efeeeb",
+              "on-surface": "#1a1c1a",
+              "inverse-on-surface": "#f2f1ee",
+              "on-error": "#ffffff",
+              "surface-bright": "#faf9f6",
+              "tertiary-fixed": "#dee2ef",
+              "primary-fixed-dim": "#d7c3b2",
+              "outline-variant": "#d0c4bb",
+              "on-secondary": "#ffffff",
+              "secondary": "#6b5c4c",
+              "on-secondary-container": "#716252",
+              "secondary-fixed-dim": "#d7c3b0",
+              "on-secondary-fixed": "#241a0e",
+              "inverse-primary": "#d7c3b2",
+              "background": "#faf9f6",
+              "on-tertiary": "#ffffff",
+              "primary": "#6b5c4e",
+              "surface": "#faf9f6",
+              "on-secondary-fixed-variant": "#524436",
+              "error": "#ba1a1a",
+              "outline": "#7f756d",
+              "surface-container-high": "#e9e8e5",
+              "on-background": "#1a1c1a",
+              "surface-variant": "#e3e2e0",
+              "primary-container": "#d9c5b4",
+              "on-primary-fixed": "#24190f",
+              "tertiary-container": "#c3c8d4",
+              "surface-dim": "#dbdad7",
+              "surface-tint": "#6b5c4e",
+              "on-tertiary-fixed-variant": "#414751",
+              "primary-fixed": "#f4dfcd",
+              "secondary-fixed": "#f4dfcb",
+              "on-surface-variant": "#4d453e",
+              "on-tertiary-container": "#4e545e",
+              "surface-container-highest": "#e3e2e0",
+              "surface-container-low": "#f4f3f1"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 1rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#FAF9F6]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800" data-icon="menu">menu</span>
+</div>
+<h1 class="text-xl font-bold text-stone-900 tracking-tight font-headline">Digital Curator</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-24 px-6 space-y-16">
+<!-- Featured Story Section -->
+<section class="relative group">
+<div class="overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist modern interior with clean lines, white walls, a single wooden chair, and soft morning sunlight casting long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_vwVZFe52-IwjsaegYVepmn2UOR3xlv856HaVm9In4uef8HR2Zqo7dCsVZ_lw6PapilysYr93iBQ4IXhM62aoUZILlFkIkXyrEMM4X653BHvhK2gbKz6ImwjPjHHAXwW3LEHzmxpBNgI7qOxuJHUoFRS6xEj-LV1i6GRu0S3XHQVfQKTUW3ibnt3TasFHopyAaIvD0CdTuh266KzuJcWdiu6lyjMdJ10NCMZlFw0KxkJNhlWIwgFqBRS5EeyxEqShB3Y8K0PQA"/>
+</div>
+<div class="mt-6 space-y-3">
+<span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary font-label">Architecture</span>
+<h2 class="text-3xl font-extrabold font-headline leading-tight tracking-tight text-on-surface">The Soul of Minimalist Architecture</h2>
+<p class="text-on-surface-variant font-light leading-relaxed">Exploring how space, light, and silence converge to create sanctuaries in a noisy digital world.</p>
+<button class="mt-2 text-primary font-semibold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                Read Story 
+                <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Latest Curations (Masonry Grid) -->
+<section class="space-y-8">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl font-bold font-headline">Latest Curations</h3>
+<span class="text-xs font-medium text-stone-400 font-label uppercase tracking-widest">Filter By</span>
+</div>
+<div class="masonry-grid">
+<!-- Card 1 (Short) -->
+<article class="masonry-item group">
+<div class="rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full aspect-square object-cover" data-alt="Close-up of artisan pastries on a rustic wooden table with soft focus bakery background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4RT_lOmPownKGPyAuervWtKxxDNfqiaSmGEbpCXqpSQhYg3tINk253O-VibWCOwANU-hbaYK122G1NAubCozZ567w80IjiQqc4OJolJTV4eBVEFNkfErUCoOz09OfQRFspa1qRRIVc7Es1uy0nyypOLsuq9Y2IsGeKYVEt7T2ag6tVQXwb-vCvuAzS93tHVR_iQ7jAgyqp8E4yG-0XGI65P0ro4QH66Hj_2hfTTX050foEHLPfVd-QmgKxKD1eZmR1CJQS9vrNg"/>
+</div>
+<div class="mt-3 space-y-1">
+<div class="flex justify-between items-center">
+<span class="text-[9px] font-bold text-primary uppercase tracking-widest">Eat</span>
+<span class="text-[9px] text-stone-400">OCT 12</span>
+</div>
+<h4 class="font-bold text-sm leading-snug">The Ritual of Morning Dough</h4>
+</div>
+</article>
+<!-- Card 2 (Tall) -->
+<article class="masonry-item group">
+<div class="rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full aspect-[2/3] object-cover" data-alt="Clean desk setup with a mechanical keyboard, a small succulent, and a vintage Leica camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK20TrfsmhEWtVvjs5_T-5l85ssKlCxNCpLLoDgfSVt_aNe_SNe0biB0_gzYVLK0s9HSuOzJQUee9XbqMFCOo65yPJT9a5MEQJIgXKvf8QXg1oVy6HFA3IwrO4o0qQ2ASum4kSvvZnmXGaf4hytUzdwcJN00I6nKe7ThuFNg7atN_TZFt3lcDRHnKTFcYraYv0GFkYa_NbVPYThsHGC4h7CS9YNdOJaSFGXufeMG7tLqjM09dlAHqm3bXdT7NuY0CuPH4lKxnfHA"/>
+</div>
+<div class="mt-3 space-y-1">
+<div class="flex justify-between items-center">
+<span class="text-[9px] font-bold text-primary uppercase tracking-widest">Tech</span>
+<span class="text-[9px] text-stone-400">OCT 10</span>
+</div>
+<h4 class="font-bold text-sm leading-snug">Analog Tools for Digital Minds</h4>
+</div>
+</article>
+<!-- Card 3 (Medium) -->
+<article class="masonry-item group">
+<div class="rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full aspect-[4/5] object-cover" data-alt="Interior of a luxury spa with warm wood paneling and soft indirect amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE5M0n602N5jFkCdjC5jtKTkaVIqUE2AiTrwjvoFQRkCD9FYXdC1TK5gYlIUnasTJuyWlLwSs-Pap6tQF82pznkMlsLROyw77ROIfiGtOcVdatnuWOZyB7CYLWLqkNWzhxoXb9GI4Dg2ksx6HnZ5upMq_QXlAwM0WLredxrS9PmwhdDXYCU8V8Bhma0vawH2sCbQ0KUa7TKynycFn8eq_tR0o3pPWsS8xgTwP4dv0Clu1joY0Yw2_38C9Cgd8EXlRcWl7HvTBlnA"/>
+</div>
+<div class="mt-3 space-y-1">
+<div class="flex justify-between items-center">
+<span class="text-[9px] font-bold text-primary uppercase tracking-widest">Lifestyle</span>
+<span class="text-[9px] text-stone-400">OCT 08</span>
+</div>
+<h4 class="font-bold text-sm leading-snug">Defining Luxury in Silence</h4>
+</div>
+</article>
+<!-- Card 4 (Short) -->
+<article class="masonry-item group">
+<div class="rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full aspect-square object-cover" data-alt="A collection of minimalist leather journals and a high-end fountain pen on a linen surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPFkDviA-bynmaMkHcp-zh6D28MGG678a7g7cBGvpB3xyYByXFJeadAXn6jsN0HmZKro9W3jMZQxNroLmT8psr-ZSCtEB0zACmNHTkeoWEL34y8iuz78wCyklN6Ew8aKHyERXJuLvHkhx_TSzTj_10oNdGbQgGjzIGHzJ3RX8fXP32zpQbP6DD6arEndCVn8baozxx7zvsYn1oPtHro0r_yhX4Dkd8taDH6B12QaFcMxf7ykrsbH9o7V5XAvwQdSVHbUMXs8eAQA"/>
+</div>
+<div class="mt-3 space-y-1">
+<div class="flex justify-between items-center">
+<span class="text-[9px] font-bold text-primary uppercase tracking-widest">Design</span>
+<span class="text-[9px] text-stone-400">OCT 05</span>
+</div>
+<h4 class="font-bold text-sm leading-snug">Curation as a Craft</h4>
+</div>
+</article>
+</div>
+</section>
+<!-- New Second Featured Section (Hero Mirror) -->
+<section class="relative group">
+<div class="overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist and high-end ceramics studio featuring hand-crafted clay vessels on raw concrete shelving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt4z89lT9e1-yXoY4XhM62aoUZILlFkIkXyrEMM4X653BHvhK2gbKz6ImwjPjHHAXwW3LEHzmxpBNgI7qOxuJHUoFRS6xEj-LV1i6GRu0S3XHQVfQKTUW3ibnt3TasFHopyAaIvD0CdTuh266KzuJcWdiu6lyjMdJ10NCMZlFw0KxkJNhlWIwgFqBRS5EeyxEqShB3Y8K0PQA"/>
+</div>
+<div class="mt-6 space-y-3">
+<span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary font-label">Craft</span>
+<h2 class="text-3xl font-extrabold font-headline leading-tight tracking-tight text-on-surface">The Resurgence of the Hand-Made</h2>
+<p class="text-on-surface-variant font-light leading-relaxed">Why the tactile imperfection of ceramics and woven textiles is becoming the ultimate luxury in a pixel-perfect world.</p>
+<button class="mt-2 text-primary font-semibold flex items-center gap-2 text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                Read Story 
+                <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Selected Archives Carousel Section -->
+<section class="space-y-8 overflow-hidden">
+<div class="flex justify-between items-center">
+<h2 class="text-2xl font-bold font-headline">Selected Archives</h2>
+<div class="flex gap-2">
+<button aria-label="Previous" class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button aria-label="Next" class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="relative">
+<div class="flex gap-6 overflow-x-auto hide-scrollbar snap-x snap-mandatory -mx-6 px-6 pb-4">
+<!-- Carousel Item 1 -->
+<div class="flex-none w-[280px] snap-start group/card">
+<div class="mb-4 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="archival photo of mid-century modern furniture" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hP9Zg_Rj5LInXf-eO7Yv_rP9z-hW6e8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Volume 01</span>
+<h3 class="font-headline text-lg font-bold leading-tight">The Mid-Century Modernism Resurgence.</h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">An in-depth look at the enduring legacy of the Eames and Miller era in today's digital homes.</p>
+</div>
+</div>
+<!-- Carousel Item 2 -->
+<div class="flex-none w-[280px] snap-start group/card">
+<div class="mb-4 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="black and white architecture photo" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kQ0vR_V9lP6m_v8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Volume 02</span>
+<h3 class="font-headline text-lg font-bold leading-tight">Monochrome as a Mindset.</h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">Why limiting your palette can actually expand your creative horizons and mental clarity.</p>
+</div>
+</div>
+<!-- Carousel Item 3 -->
+<div class="flex-none w-[280px] snap-start group/card">
+<div class="mb-4 overflow-hidden rounded-xl bg-surface-container-low aspect-[3/4]">
+<img alt="top view of a well-organized creative workspace" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuF2nL9pE_Z1mO8v_v8z8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8x8"/>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Volume 03</span>
+<h3 class="font-headline text-lg font-bold leading-tight">The Craft of Analog Productivity.</h3>
+<p class="text-on-surface-variant text-xs line-clamp-2 leading-relaxed">Exploring the tactile joy of paper planners, fountain pens, and offline thinking.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription Box -->
+<section class="bg-primary-container/30 rounded-2xl p-8 space-y-6 text-center">
+<div class="space-y-2">
+<span class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/70">The Weekly Dispatch</span>
+<h3 class="text-2xl font-extrabold font-headline text-on-surface">Curated inspiration, delivered weekly.</h3>
+</div>
+<form class="space-y-4" onsubmit="return false;">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-4 px-6 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-stone-400 font-body" placeholder="Your email address" type="email"/>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-lg text-sm uppercase tracking-widest hover:opacity-90 transition-opacity">
+                Subscribe
+            </button>
+</form>
+<p class="text-[10px] text-stone-400 uppercase tracking-tighter">No spam. Only essential aesthetics.</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-32 flex flex-col items-center gap-8 px-8 text-center bg-stone-50/50">
+<div class="font-headline text-lg font-medium text-stone-900">Digital Curator</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-3">
+<a class="text-stone-500 text-sm font-light hover:text-stone-800 transition-all" href="#">Journal</a>
+<a class="text-stone-500 text-sm font-light hover:text-stone-800 transition-all" href="#">Archives</a>
+<a class="text-stone-500 text-sm font-light hover:text-stone-800 transition-all" href="#">Philosophy</a>
+<a class="text-stone-500 text-sm font-light hover:text-stone-800 transition-all" href="#">Studio</a>
+</nav>
+<div class="text-stone-400 text-xs font-light leading-relaxed max-w-xs">
+        © 2024 Digital Curator. Ethically Sourced Design.
+    </div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 flex justify-around items-center px-4 py-2 z-50">
+<div class="bg-stone-100/90 backdrop-blur-md flex justify-around items-center w-[90%] rounded-full max-w-md shadow-[0_20px_40px_rgba(0,0,0,0.04)] py-2">
+<!-- Home (Active) -->
+<a class="bg-[#6B5C4E] text-white rounded-full p-3 scale-90 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+</a>
+<!-- Explore -->
+<a class="text-stone-400 p-3 flex items-center justify-center hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</a>
+<!-- Bookmark -->
+<a class="text-stone-400 p-3 flex items-center justify-center hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</a>
+<!-- Person -->
+<a class="text-stone-400 p-3 flex items-center justify-center hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</div>
+</nav>
+</body></html>
