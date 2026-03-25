@@ -3,6 +3,7 @@
 @theme {
   --font-sans: "Pretendard", "Inter", sans-serif;
   --font-serif: "Noto Serif KR", serif;
+  --font-gmarket: "GmarketSans", sans-serif;
 
   --color-primary: #6b5c4e;
   --color-primary-container: #d9c5b4;
@@ -32,6 +33,9 @@
   }
   .font-label {
     font-family: var(--font-sans);
+  }
+  .font-gmarket {
+    font-family: var(--font-gmarket);
   }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;

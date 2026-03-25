@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/blog?category=tech', label: 'Tech' },
-  { href: '/blog?category=eat', label: 'Eat' },
-  { href: '/blog?category=lifestyle', label: 'Lifestyle' },
-  { href: '/contact', label: 'Etc' },
+  { href: '/blog?category=tech', label: 'TECH' },
+  { href: '/blog?category=eat', label: 'EAT' },
+  { href: '/blog?category=lifestyle', label: 'LIFESTYLE' },
+  { href: '/contact', label: 'ETC' },
 ];
 
 export default function Navbar() {
@@ -48,7 +48,7 @@ export default function Navbar() {
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface hover:text-primary"
+              className="font-gmarket text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface hover:text-primary"
               style={{
                 transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
                 opacity: menuOpen ? 1 : 0,

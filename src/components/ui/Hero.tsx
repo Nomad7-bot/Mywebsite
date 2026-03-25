@@ -32,7 +32,7 @@ export default function Hero({ article }: { article: Article }) {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-bounce">
+      <div className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-40 animate-bounce">
         <span className="font-label text-[10px] uppercase tracking-[0.2em]">Scroll</span>
         <span className="material-symbols-outlined text-sm">expand_more</span>
       </div>
